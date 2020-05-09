@@ -1,0 +1,42 @@
+server:
+    listenHost: 0.0.0.0
+    listenPort: 9510
+    authorization: "test" #header验证
+    env: "test"  # 可以设置test 、sandbox、prod 
+    ipWhiteTable: ["127.0.0.1","192.168.0.1/16"] #白名单绕过auth认证
+    limiter:
+        1: 
+            data : ["2"] #103
+            msg : ""
+        5: 
+            data: ["x","h"]  #100,105
+            msg: "您今天发送的验证码已经超过5次，不能再发送了"
+    sms:
+        1: "test1"
+        2: "test2"
+    debug: true
+    dingding: "https://oapi.dingtalk.com/robot/send?access_token=test2"
+component:
+    db:
+        system:
+            host: "127.0.0.1"
+            port: 33060
+            user: "test1"
+            password: "123456"
+            database: "test1"
+        www:
+            host: "127.0.0.1"
+            port: 33060
+            user: "test2"
+            password: "123456"
+            database: "test2"
+    redis:
+        local:
+            host: "127.0.0.1"
+            port: 63790
+            password: "13"
+            db: 8
+    log:
+        console: true
+        level: "debug"
+        dir : "/data/log/smsService/"

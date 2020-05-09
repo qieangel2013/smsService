@@ -1,0 +1,40 @@
+info:
+  contact: {}
+  license: {}
+paths:
+  /403:
+    get:
+      produces:
+      - text/html
+      responses:
+        "200": {}
+        "500": {}
+      summary: 访问403
+  /404:
+    get:
+      produces:
+      - text/html
+      responses:
+        "200": {}
+        "500": {}
+      summary: 无路由或者无方法返回404
+  /api/v1/smsApi/SendSms:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - default: '{"tpl":"xKGgM","phone":"18614064093","params":{"code":6547,"minute":1}}'
+        description: 发短信参数
+        in: body
+        name: params
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"errCode":"0","msg":"","data":"","Action":"SendSms"}'
+        "500": {}
+      summary: 发送短信
+swagger: "2.0"
