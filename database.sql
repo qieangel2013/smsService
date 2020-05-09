@@ -56,7 +56,7 @@ CREATE TABLE `cj_sms_log_202005` (
   `content` varchar(500) NOT NULL DEFAULT '' COMMENT '短信内容',
   `prov_smsid` varchar(64) DEFAULT NULL COMMENT '短信提供方的消息id',
   `status` tinyint(4) NOT NULL DEFAULT '1' COMMENT '发送短信结果状态，1成功，0失败',
-  `provider` varchar(32) DEFAULT NULL COMMENT '短信提供商，zhuoyun卓云，ucpaas云之讯',
+  `provider` varchar(32) DEFAULT NULL COMMENT '短信提供商',
   `create_datetime` bigint(20) DEFAULT NULL COMMENT '创建时间',
   `prov_time` varchar(64) DEFAULT NULL COMMENT '短息提供商记录的短信时间',
   `return_str` text COMMENT '发短信接口返回的字符串',
