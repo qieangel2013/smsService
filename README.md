@@ -23,8 +23,8 @@ server:
             data: ["x","h"]                #100,105
             msg: "您今天发送的验证码已经超过5次，不能再发送了"
     sms:                                          #设置运营商优先级发送短信，数字越小，优先级越高          
-        1: "changzhuo"
-        2: "submail"
+        1: "test1"
+        2: "test2"
     debug: true                                   #打开debug模式，可以用于有问题定位到问题，优先级大于环境env配置
     dingding: "https://oapi.dingtalk.com/robot/send?access_token=51123" #短信运营商发送失败发送钉钉报警
 component:                                      #依赖组件配置
